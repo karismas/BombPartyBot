@@ -1,1 +1,13 @@
 # BombPartyBot
+
+BombParty is a fun online typing game that can be played at: https://jklm.fun/
+
+After selecting a name, joining/hosting a server and waiting for the round to start, a collection of letters and a bomb will appear, along with an arrow pointing towards a player at random. This player must type a word (that hasn't already been used) containing these letters. For example, if the letters `LO` were displayed, `HELLO` could be used. If `HELLO` was already used, then `LOW` could be used, or perhaps even `XYLOTYPOGRAPHIES`, although that one may be a bit too easy. If a word containing the displayed letters is not entered before the bomb explodes, the player of the current turn will lose a life and the arrow will point to the next player in a clockwise direction. If the player successfully types a word in time, the player will not lose a life and the arrow will continue to the next person in a clockwise direction. This continues until every player but one loses all of their lives.
+
+On the right side of the screen there is a set of letters highlighted in yellow for each player. Every time a word is typed containing any of the letters, the letters decrement in their count until they reach zero. Once they reach zero, they turn gray. If every letter is eventually typed, the player gains a life and the letters are incremented again. This process can be repeated indefinitely and is the only way of gaining lives.
+
+This repository contains some sloppily written code in Python that plays the game for you. The `dict.txt` file contains every word that the game uses (as of the time you read this it may be lacking words or containing words that have been removed). The bot works by opening a window in Firefox and loading the website for you. Once you enter your name on the website, you must enter it in the terminal as well. Once you join/host a game, enter the letters that must be typed to gain a life in the terminal (there are multiple options to do so). Once the round has started, press enter in the terminal window and switch focus back to the Firefox window. At this point, the bot will wait until it's your turn. Once it is your turn, the bot will type into the box for you and press enter. The typing is done such that it looks like a human typing (the randomness needs to be adjusted, however). The bot will purposely choose words that not only contain the required grouping of letters, but also which uses as many letters that haven't been used from the right side to gain more lives.
+
+This takes away from the fun of the game, of course, and I don't recommend using it in a public server (you will most likely be banned).
+
+This bot should work on Windows and Mac, but has not been tested on Linux machines.
